@@ -22,11 +22,13 @@ export const StepOne: React.FC<StepProps> = ({ formDispatch, formState }) => {
         }
         formDispatch({
             type: "SET_FULLNAME",
-            payload: { fullName: fullName.value },
+            payload: { fullName: fullName.value.trim() },
         });
         formDispatch({
             type: "SET_DISPLAYNAME",
-            payload: { displayName: displayName.value || suggestedDisplayName },
+            payload: {
+                displayName: displayName.value.trim() || suggestedDisplayName,
+            },
         });
         formDispatch({ type: "SET_STEP", payload: { step: 2 } });
     };

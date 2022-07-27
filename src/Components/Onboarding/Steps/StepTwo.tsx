@@ -28,13 +28,14 @@ export const StepTwo: React.FC<StepProps> = ({ formDispatch, formState }) => {
         }
         formDispatch({
             type: "SET_WORKSPACENAME",
-            payload: { workspaceName: workspaceName.value },
+            payload: { workspaceName: workspaceName.value.trim() },
         });
         formDispatch({
             type: "SET_WORKSPACEURL",
             payload: {
                 workspaceUrl:
-                    addOnUrl + (workspaceUrl.value || suggestedWorkspaceUrl),
+                    addOnUrl +
+                    (workspaceUrl.value.trim() || suggestedWorkspaceUrl),
             },
         });
         formDispatch({ type: "SET_STEP", payload: { step: 3 } });
