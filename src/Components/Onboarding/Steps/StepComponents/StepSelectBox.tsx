@@ -10,14 +10,15 @@ const SelectBox = styled.button<{ active?: boolean }>`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    gap: 0.75rem;
+    color: ${COLOR.text_dark};
     border: solid 2px;
     border-color: ${(props) => (props.active ? COLOR.primary : COLOR.border)};
     border-radius: 0.5rem;
-    gap: 0.75rem;
-    padding: 1rem;
-    width: 100%;
     background-color: transparent;
-    text-align: left;
     cursor: pointer;
     transition: all 200ms ease-out;
     & svg {
@@ -48,7 +49,7 @@ export const StepSelectBox: React.FC<StepProps> = ({
                         payload: { usage: "myself" },
                     })
                 }>
-                <UserIcon width="1.5rem" height="1.5rem" />
+                <UserIcon width="1.25rem" height="1.5rem" />
                 <h3>For myself</h3>
                 <MutedText>
                     Write better, Think more clearly, Stay organized.
@@ -63,7 +64,7 @@ export const StepSelectBox: React.FC<StepProps> = ({
                         payload: { usage: "team" },
                     })
                 }>
-                <MultiUserIcon width="1.5rem" height="1.5rem" />
+                <MultiUserIcon width="1.25rem" height="1.5rem" />
                 <h3>With my team</h3>
                 <MutedText>
                     Wikis, docs, tasks & projects, all in one place.
