@@ -24,12 +24,15 @@ const SelectBox = styled.button<{ active?: boolean }>`
     & svg {
         fill: ${(props) => (props.active ? COLOR.primary : COLOR.text_dark)};
     }
+    & ${MutedText} {
+        margin-bottom: auto;
+    }
 `;
 
 const Wrapper = styled.div`
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 2rem;
 `;
