@@ -14,6 +14,6 @@ export const Label = styled.label`
 `;
 
 export const HelperLabel = styled.span`
-    margin: 0 0.25rem;
+    font-size: 0.75rem;
     color: ${COLOR.text_light};
 `;
