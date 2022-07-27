@@ -47,7 +47,7 @@ export const StepTwo: React.FC<StepProps> = ({ formDispatch, formState }) => {
                 You can always create another workspace later.
             </StepSubHeading>
             <StepInputsWrapper>
-                <BlockLabel>
+                <BlockLabel htmlFor="workspace-name">
                     Workspace Name{" "}
                     {!workspaceName.valid && (
                         <HelperLabel>
@@ -56,6 +56,7 @@ export const StepTwo: React.FC<StepProps> = ({ formDispatch, formState }) => {
                     )}
                 </BlockLabel>
                 <TextInput
+                    id="workspace-name"
                     ref={workspaceName.ref}
                     value={workspaceName.value}
                     onChange={workspaceName.onChange}
@@ -65,10 +66,11 @@ export const StepTwo: React.FC<StepProps> = ({ formDispatch, formState }) => {
                     type="text"
                     placeholder="Eden"
                 />
-                <BlockLabel>
-                    Workspace URL<HelperLabel>(optional)</HelperLabel>
+                <BlockLabel htmlFor="workspace-url">
+                    Workspace URL <HelperLabel>(optional)</HelperLabel>
                 </BlockLabel>
                 <TextInputWithAddon
+                    id="workspace-url"
                     value={workspaceUrl.value}
                     onChange={workspaceUrl.onChange}
                     onBlur={workspaceUrl.onBlur}

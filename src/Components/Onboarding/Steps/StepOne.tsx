@@ -37,7 +37,7 @@ export const StepOne: React.FC<StepProps> = ({ formDispatch, formState }) => {
             <StepHeading>Welcome! First things first...</StepHeading>
             <StepSubHeading>You can always change them later.</StepSubHeading>
             <StepInputsWrapper>
-                <BlockLabel>
+                <BlockLabel htmlFor="full-name">
                     Full Name{" "}
                     {!fullName.valid && (
                         <HelperLabel>
@@ -46,6 +46,7 @@ export const StepOne: React.FC<StepProps> = ({ formDispatch, formState }) => {
                     )}
                 </BlockLabel>
                 <TextInput
+                    id="full-name"
                     ref={fullName.ref}
                     value={fullName.value}
                     onChange={fullName.onChange}
@@ -56,8 +57,9 @@ export const StepOne: React.FC<StepProps> = ({ formDispatch, formState }) => {
                     placeholder="Steve Jobs"
                 />
 
-                <BlockLabel>Display Name</BlockLabel>
+                <BlockLabel htmlFor="display-name">Display Name</BlockLabel>
                 <TextInput
+                    id="display-name"
                     value={displayName.value}
                     onChange={displayName.onChange}
                     onBlur={displayName.onBlur}
