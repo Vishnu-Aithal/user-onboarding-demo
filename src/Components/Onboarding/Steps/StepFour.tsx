@@ -7,6 +7,7 @@ import { StepInputsWrapper } from "./StepComponents/StepInputsWrapper-sc";
 import { StepProps } from "./StepProps";
 import { StepSubHeading } from "./StepComponents/StepSubHeading-sc";
 import { StepWrapper } from "./StepComponents/StepWrapper-sc";
+import { CheckIcon } from "../../../Assets/Icons/CheckIcon";
 
 const RoundTick = styled.div`
     ${flexCenter("row")}
@@ -22,9 +23,9 @@ export const StepFour: React.FC<StepProps> = ({ formDispatch, formState }) => {
     return (
         <StepWrapper>
             <RoundTick>
-                <span>✔</span>
+                <CheckIcon height="1.25rem" width="1.25rem" />
             </RoundTick>
-            <StepHeading>{`Congratulations, ${formState.displayName}`}</StepHeading>
+            <StepHeading>{`Congratulations, ${formState.displayName}!`}</StepHeading>
             <StepSubHeading>
                 You have completed onboarding, you can start using the Eden!
             </StepSubHeading>
