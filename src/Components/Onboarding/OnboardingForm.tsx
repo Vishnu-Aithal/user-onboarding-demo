@@ -18,7 +18,7 @@ const StyledForm = styled.form`
     gap: 1rem;
     @media only screen and (max-width: ${BREAKPOINT.sm}) {
         & {
-            width: 80%;
+            max-width: 85%;
         }
     }
 `;

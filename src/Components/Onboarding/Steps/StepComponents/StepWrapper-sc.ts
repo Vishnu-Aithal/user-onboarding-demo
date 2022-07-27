@@ -7,7 +7,8 @@ const fadeIn = keyframes`
 `;
 
 export const StepWrapper = styled.div`
-    ${flexCenter("column")}
+    ${flexCenter("column")};
+    width: 100%;
     animation-name: ${fadeIn};
     animation-duration: 350ms;
     animation-timing-function: ease-in;
